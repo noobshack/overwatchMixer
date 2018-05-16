@@ -1,15 +1,16 @@
 var numOfNames = 1;
 var nameNumber = 1;
+var numOfRoles = 1;
+
 
 document.getElementById("addName").onclick = function () {
 	if (numOfNames < 12) {
 		var newdiv = document.createElement('div');
-      	newdiv.innerHTML = "Name " + (numOfNames + 1) + " <br><input type='text' class='textBox' name='humanNames[]'>";
+      	newdiv.innerHTML = "Name " + (numOfNames + 1) + " <br><input type='text' class='nameInput textBox' name='humanNames[]'>";
       	document.getElementById("nameContainer").appendChild(newdiv);
 		numOfNames = numOfNames + 1;
 	}
 };
-
 
 var removeName = function () {
 	if (numOfNames > 1) {
@@ -24,15 +25,53 @@ var removeName = function () {
 	}
 }
 
-var createTeam = function () {
+var addRole = function () {
+	var addRoleDiv = document.createElement('div');
+	addRoleDiv.innerHTML = "Role Name: " + "<input class='roleInput textBox' type='text' name='roleNames[]'>" + " Amount Per Team: " + "<input class='roleNumber textBox' value='0' type='number'>"
+	document.getElementById("settingsContainer").appendChild(addRoleDiv);
+	numOfRoles = numOfRoles + 1;
+}
 
+var removeRole = function () {
+	if (numOfRoles > 1) {
+		for (var num = 0; num < 1; ++num) {
+			var toBeRemoved = document.getElementById("settingsContainer").lastChild;
+			if (toBeRemoved.id) {
+				return;
+			}
+			toBeRemoved.remove();
+			numOfRoles = numOfRoles - 1;
+		}
+	}
+}
+
+// TO DO COMPLETE THIS YO
+var getRoles = function () {
+	var roleNames = [];
+	var roles = [];
+	if (numOfRoles === 1 && document.getElementById("firstRoleName").value === '') {
+		roles = ["Support", "Support", "Tank", "Tank", "DPS", "DPS"];
+		return roles
+	}
+	
+	var roleInputs = document.getElementsByClassName('roleInput');
+	var roleNumber = document.getElementsByClassName('roleNumber');
+	for (var p = 0; p < roleInputs.length; ++p) {
+		for(var n = 0; n < roleNumber[p].value; ++n){
+			roleNames.push(roleInputs[p].value);
+		}
+	}
+	return roleNames;
+}
+
+var createTeam = function () {
 	var inputs, index;
-	var positions = ["Support", "Support", "Tank", "Tank", "DPS", "DPS"];
+	var positions = getRoles();
 	var listOfNames = [];
 	var team1 = [];
 	var team2 = [];
 
-	inputs = document.getElementsByTagName('input');
+	inputs = document.getElementsByClassName('nameInput');
 	for (index = 0; index < inputs.length; ++index) {
  		listOfNames.push(inputs[index].value);
 

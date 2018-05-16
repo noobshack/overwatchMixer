@@ -1,31 +1,40 @@
 <html lang="en">
 <head>
 	<link rel="stylesheet" type="text/css" href="overwatch.css">
-	<title>Set Up Teams!</title>
 </head>
 <body>
-	<div id="nameContainer">
-		<div class="title">Cynize's Overwatch Team Scrambler!</div>
+	<div class="container" id="nameContainer">
+		<h3 class="title">Cynize's Overwatch Team Scrambler!</h3>
+		<h3>Player Names</h3>
 		<button class="button addName" type="button" id="addName" value="Add Name">Add Name</button>
 		<button class="button removeName" onclick="removeName()" type="button" id="removeName" value="Remove Name">Remove Name</button>
 		<br>
 		Name 1 
 		<br>
-		<input class="textBox" id=firstInputName type="text" name="humanNames[]">
+		<input class="nameInput textBox" id=firstInputName type="text" name="humanNames[]">
+	</div>
+	
+	<div class="container" id="settingsContainer">
+		<h3 class="teamSettings">Team Settings</h3>
+		<button class="button addRole" onclick="addRole()" type="button" id="addRole" value="Add Role">Add Role</button>
+		<button class="button removeRole" onclick="removeRole()" type="button" id="removeRole" value="Remove Role">Remove Role</button>
+		<br>
+		Role Name: <input class="roleInput textBox" id="firstRoleName" type="text" name="roleNames[]"> Amount Per Team: <input class="roleNumber textBox" id="firstRoleNumber" value="0" type="number">
 	</div>
 	
 	<button class="button createTeam" onclick="createTeam()" type="button">Create Teams</button>
-
-
-	<div id="finalTeam">
-		<table id="team1">
-			<th>Team1</th>
-		</table>
-		<table id="team2">
-			<th>Team2</th>
-		</table>
+	
+	<div class="container" id="resultContainer">
+		<h3 class="teamSettings">Team Results</h3>
+		<div id="finalTeam">
+			<table id="team1">
+				<th>Team1</th>
+			</table>
+			<table id="team2">
+				<th>Team2</th>
+			</table>
+		</div>
 	</div>
-
 
 	<script src="overwatch.js"></script>
 </body>
