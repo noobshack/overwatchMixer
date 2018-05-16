@@ -1,4 +1,8 @@
-# overwatchScramber
+# Cynize's Overwatch Team Scrambler!
+
+Download all files into the same folder
+Run overwatch.html
+
 Player Names Section
   Name all of the player that are playing in the game
 
