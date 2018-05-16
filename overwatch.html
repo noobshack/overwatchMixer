@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+	<link rel="stylesheet" type="text/css" href="overwatch.css">
+	<title>Set Up Teams!</title>
+</head>
+<body>
+	<div id="nameContainer">
+		<div class="title">Cynize's Overwatch Team Scrambler!</div>
+		<button class="button addName" type="button" id="addName" value="Add Name">Add Name</button>
+		<button class="button removeName" onclick="removeName()" type="button" id="removeName" value="Remove Name">Remove Name</button>
+		<br>
+		Name 1 
+		<br>
+		<input class="textBox" id=firstInputName type="text" name="humanNames[]">
+	</div>
+	
+	<button class="button createTeam" onclick="createTeam()" type="button">Create Teams</button>
+
+
+	<div id="finalTeam">
+		<table id="team1">
+			<th>Team1</th>
+		</table>
+		<table id="team2">
+			<th>Team2</th>
+		</table>
+	</div>
+
+
+	<script src="overwatch.js"></script>
+</body>
+</html>
