@@ -60,6 +60,12 @@ tr:nth-child(even) {
     background-color: #dddddd;
 }
 
+.container {
+	margin-top: 25px;
+	border: 2px solid;
+	padding: 10px;
+}
+
 #team1 {
 	color: blue;
 	width: 50%;
