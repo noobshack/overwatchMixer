@@ -3,9 +3,9 @@
 	<link rel="stylesheet" type="text/css" href="overwatch.css">
 </head>
 <body>
+	<h3 class="title">Cynize's Overwatch Team Scrambler!</h3>
+	<h3>Player Names</h3>
 	<div class="container" id="nameContainer">
-		<h3 class="title">Cynize's Overwatch Team Scrambler!</h3>
-		<h3>Player Names</h3>
 		<button class="button addName" type="button" id="addName" value="Add Name">Add Name</button>
 		<button class="button removeName" onclick="removeName()" type="button" id="removeName" value="Remove Name">Remove Name</button>
 		<br>
@@ -14,8 +14,8 @@
 		<input class="nameInput textBox" id=firstInputName type="text" name="humanNames[]">
 	</div>
 	
+	<h3 class="teamSettings">Team Settings</h3>
 	<div class="container" id="settingsContainer">
-		<h3 class="teamSettings">Team Settings</h3>
 		<button class="button addRole" onclick="addRole()" type="button" id="addRole" value="Add Role">Add Role</button>
 		<button class="button removeRole" onclick="removeRole()" type="button" id="removeRole" value="Remove Role">Remove Role</button>
 		<br>
@@ -23,9 +23,9 @@
 	</div>
 	
 	<button class="button createTeam" onclick="createTeam()" type="button">Create Teams</button>
-	
+
+	<h3 class="teamSettings">Team Results</h3>
 	<div class="container" id="resultContainer">
-		<h3 class="teamSettings">Team Results</h3>
 		<div id="finalTeam">
 			<table id="team1">
 				<th>Best Team</th>
