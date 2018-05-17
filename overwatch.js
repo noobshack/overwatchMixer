@@ -95,10 +95,10 @@ var createTeam = function () {
 	// Uncomment the below if you want to shuffle positions as well
 	// positions = shuffle(positions);
 	for (var p = 0; p < team1.length; ++p) {
-		team1[p] = team1[p] + " " + positions[p];
+		team1[p] = team1[p] + " [" + positions[p] + "]";
 	}
 	for (var p = 0; p < team2.length; ++p) {
-		team2[p] = team2[p] + " " + positions[p];
+		team2[p] = team2[p] + " [" + positions[p] + "]";
 	}
 
 	// Show the Tables with Information!!!
